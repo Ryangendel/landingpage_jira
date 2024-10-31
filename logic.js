@@ -3,8 +3,8 @@ $(document).ready(function(){
     $('.sect-t-footer').css('height', height);
 });
 
-const footer = document.querySelector('.footer');
-
+const footer = document.querySelector('footer.footer');
+// const element = document.getElementsByClassName(".footer")
 // Function to handle scroll and apply style
 function handleScroll() {
   const documentHeight = document.documentElement.scrollHeight;
@@ -13,9 +13,11 @@ function handleScroll() {
 
   // Apply inline style if scrolled halfway, else remove it
   if (scrollPosition >= halfwayPoint) {
-    footer.style.bottom = '0';
+    footer.style.bottom = 0;
+    // element.style.bottom = 0
   } else {
     footer.style.bottom = ''; // Reset to original value if scrolled back up
+    // element.style.bottom = ""
   }
 }
 
